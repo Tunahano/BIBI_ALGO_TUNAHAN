@@ -1,0 +1,27 @@
+public class Primzahlen {
+	static boolean istPrim;
+
+	public static boolean istPrimzahl(int prim) {
+
+		for (int i = 2; i <= Math.sqrt(prim); i++) {
+			if (prim % i == 0) {
+				istPrim = false;
+				break;
+			} else {
+				istPrim = true;
+			}
+		}
+		return istPrim;
+	}
+
+	public static void main(String[] args) {
+		int schranke = 100;
+		for (int i = 0; i < schranke; i++) {
+			if (Primzahlen.istPrimzahl(i)) {
+				System.out.println(i);
+			}
+		}
+
+	}
+
+}
